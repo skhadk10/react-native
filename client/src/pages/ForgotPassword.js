@@ -24,7 +24,7 @@ const ForgotPassword = () => {
       setLoading(true);
 
       const { data } = await axios.post(
-        `${process.env.REACT_APP_URL}/forgot-password`,
+        `/forgot-password`,
         {
           email,
         }

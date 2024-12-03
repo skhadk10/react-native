@@ -27,7 +27,7 @@ export default function Register() {
         toast.error("password doesnot match");
         return;
       }
-      const { data } = await axios.post(`${process.env.REACT_APP_URL}/signup`, {
+      const { data } = await axios.post(`/signup`, {
         name,
         email,
         password,

@@ -20,7 +20,7 @@ export default function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-      const { data } = await axios.post(`${process.env.REACT_APP_URL}/signin`, {
+      const { data } = await axios.post(`/signin`, {
         email,
         password,
       });
