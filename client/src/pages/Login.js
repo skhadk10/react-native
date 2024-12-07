@@ -37,7 +37,7 @@ export default function Login() {
         setLoading(false);
         setTimeout(() => {
           navigate("/dashboard");
-        }, 3000);
+        }, 2000);
       }
     } catch (err) {
       console.log(err);

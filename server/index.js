@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 
 import authRoutes from "./routes/auth.js";
+import taskRoutes from "./routes/task.js";
 
 
 const app = express();
@@ -24,5 +25,6 @@ app.use(morgan("dev"));
 
 // route middlewares
 app.use("/api", authRoutes);
+app.use("/api", taskRoutes);
 
 app.listen(8000, () => console.log("Server running on port 8000"));

@@ -28,6 +28,11 @@ export default function Main() {
             </a>
             <ul className="dropdown-menu">
               <li>
+                <NavLink className="nav-link dropdown-item " to="/dashboard">
+                  Dashboard
+                </NavLink>
+              </li>
+              <li>
                 <NavLink
                   className="nav-link dropdown-item "
                   to="/login"
