@@ -5,7 +5,7 @@ const TaskContext = createContext();
 const TaskProvider = ({ children }) => {
   const [task, setTask] = useState({
     tasks: [],
-    selected: [],
+    selected: null,
   });
 
   return (

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { TaskContext } from "../context/task";
 import CreateTask from "../component/task/CreateTask";
+import TaskList from "../component/task/TaskList";
+import UpdateTask from "../component/task/UpdateTask";
 const Tasks = () => {
   const [task, setTask] = useContext(TaskContext);
 
@@ -18,11 +20,11 @@ const Tasks = () => {
     }
   };
 
-
   return (
     <>
-      <CreateTask/>
-      {JSON.stringify(task.tasks)}
+      <CreateTask />
+      <TaskList />
+      <UpdateTask/>
     </>
   );
 };

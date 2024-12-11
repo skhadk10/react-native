@@ -11,7 +11,7 @@ const CreateTask = () => {
       const { data } = await axios.post("/task", {
         content,
       });
-      setTask({ ...task, tasks: [data, task.tasks] });
+      setTask({ ...task, tasks: [data, ...task.tasks] });
     } catch (error) {
       console.log(error);
     }

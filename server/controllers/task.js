@@ -25,3 +25,19 @@ export const task = async (req, res) => {
     console.log(error);
   }
 };
+
+export const update = async (req, res) => {
+  try {
+    const { content } = req.body;
+    console.log(content,"update");
+    const task = await  Task.updateOne({
+      task: content,
+      postedBy: req.user._id,
+    }).save();
+    console.log(task,"updated");
+    // const data = await Task.findById(task._id).populate("postedBy", "name");
+    // res.json(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
